@@ -14,13 +14,13 @@ else if(num == "" || isNaN(num)){
 else {
 //If else statements test if the number the user entered is less than, greater than, or equal to the number to guess. It will display a proper message based on the user's input
 if (num > numToGuess) {
-console.log(num + " is too large. Guess a smaller number.");
+num = prompt(num + " is too small. Guess a larger number.");
 totalGuesses -= 1;
 console.log("Total guesses: " + totalGuesses);
 
 } 
 else if (num < numToGuess) {
-console.log(num + " is too small. Guess a larger number.");
+num = prompt(num + " is too small. Guess a larger number.");
 totalGuesses -= 1;
 console.log("Total guesses: " + totalGuesses);
 
@@ -28,7 +28,7 @@ console.log("Total guesses: " + totalGuesses);
 else if (num == numToGuess) {
   console.log("You have guessed the right number, which is " + numToGuess + ".");
     console.log("You have " + totalGuesses + " guesses left. End of program.");
-    return 0;
+    return totalGuesses;
 
 }
 //Program will abruptly end if the total allowed guesses equals zero
